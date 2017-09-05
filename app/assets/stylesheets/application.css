@@ -1,0 +1,277 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require bootstrap.min
+ *= require font-awesome
+ *= require_self
+ */
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/*ヘッダー*/
+.header {
+    font: inherit;
+}
+
+.header-top {
+    background: #27CBF0;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    height: 40px;
+    width: 100%;
+    vertical-align: baseline;
+    font-size: 30px;
+}
+.header-top-content {
+    display: block;
+    margin: 0;
+    padding: 5px 20px;
+    height: 12px;
+    line-height: 1;
+}
+.header-content {
+    color: #27CBF0;
+    height: 60px;
+    font: inherit;
+    font-size: 60px;
+}
+.header-content p {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    text-align: center;
+}
+.header-alert {
+    width: 400px;
+    margin-left: auto;
+}
+.header-img {
+    width: 100%;
+    height: 0;
+    padding-top: calc(670 / 1191 * 100%); /* calc(画像高さ ÷ 画像横幅 × 100%) */
+    background: url(/images/header.jpg) center center / cover no-repeat;
+}
+.header-menu {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.header-menu li{
+    padding: 0;
+    border: solid 1px #27CBF0;
+    text-align: center;
+}
+.header-menu li a {
+    text-decoration: none;
+}
+.header-menu p{
+    color: #27CBF0;
+    font-size: 35px;
+    margin: 7px 0;
+}
+.active {
+    background-color: #27CBF0;
+}
+.active p{
+    color: white;
+}
+
+/*フッター*/
+.footer {
+    background: #eee;
+    font-size: 30px;
+    margin-top: 50px;
+    padding-top: 50px;
+    padding-bottom: 200px;
+}
+.footer-content {
+    width: 80%;
+    margin-left: 10%;
+}
+.footer-content h2 {
+    font-weight: 600;
+}
+.footer-content ul {
+    list-style-type:none;
+    font-weight: bold;
+}
+.footer-alert {
+    font-size: 25px;
+}
+
+/*投票ページ*/
+.vote {
+    text-align: center;
+    padding-top: 50px
+}
+.vote-text {
+    font-size: 50px;
+}
+.vote-current {
+    display: inline-block;
+    border: solid 5px #27CBF0;
+    border-radius: 10px;
+    margin: 20px;
+    height: 100px;
+    width: 300px;
+}
+.vote-content {
+    display: inline-block;
+    margin: 0;
+    padding: 0 20px;
+    font-size: 50px;
+    height: 100%;
+    vertical-align: middle;
+}
+.vote-content p {
+    height: 100%;
+    margin: 0;
+}
+.vote-profile {
+    width: 100%;
+    text-align: left;
+    font-weight: 200;
+    font-size: 40px;
+}
+.vote-entry-number {
+    width: 100%;
+    font-size: 35px;
+    border-bottom: solid 1px #666;
+}
+.vote-entry-number p {
+    margin: 0;
+}
+.vote-entry-name {
+    font-weight: 600;
+}
+.vote-link-twitter{
+    background-color: #55acee;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.vote-link-twitter-content {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+.vote-link-twitter i {
+    color: white;
+    position: relative;
+    top: -6px;
+}
+.vote-link-profile {
+    margin-bottom: 60px;
+}
+.vote-link-profile-content {
+    display: block;
+    color: gray;
+    width: 150px;
+    margin: 0;
+}
+.vote-link-profile-content p {
+    width: 150px;
+    margin: 0;
+}
+.btn-vote, .btn-vote:visited {
+    color: white;
+    background-color: #27CBF0;
+    border-color: #27CBF0;
+    height: 100px;
+    font-size: 50px;
+    text-align: center;
+    box-shadow: inset 0 -5px 5px rgba(0,0,0, 0.5);
+}
+.btn-vote:active {
+    position: relative;
+    /*top: 5px;*/
+}
+.vote-guide {
+    font-size: 35px;
+    padding: 20px;
+}
+
+/*プロフィールページ*/
+.profile {
+    text-align: center;
+}
+.profile-img {
+    margin: 20px auto;
+    border: 1px solid gray;
+    width: 400px;
+}
+.profile-entry {
+    color: #27CBF0;
+    font-size: 40px;
+    font-weight: 200;
+}
+.profile-name {
+    margin: 0 30px;
+    border-top: solid 1px gray;
+    border-bottom: dashed 1px gray;
+
+}
+.profile-name-full {
+    font-size: 50px;
+    font-weight: 600;
+}
+.profile-name-rome {
+    font-size: 30px;
+    font-weight: 300;
+}
+.profile-status {
+    font-size: 30px;
+    height: 210px;
+}
+.profile-status dl {
+    color: #666;
+}
+.profile-status-contents dt{
+    float: left;
+    clear: left;
+    margin-right: 10px;
+    padding-left:30px;
+    width: 400px;
+}
+.profile-status-contents dt p {
+    float: left;
+    font-weight: 200;
+}
+.profile-status-contents dd {
+    float: left;
+    margin-left: 10px;
+    font-weight: 200;
+}
+.profile-qa ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+}
+.profile-qa h3{
+    background: #eee;
+    height: 50px;
+    padding: 7px 7px 10px 40px;
+    border-top: #ccc 1px solid;
+    border-bottom: #ccc 1px solid;
+    font-size: 30px;
+}
+.profile-qa p {
+    padding: 7px 7px 10px 30px;
+    font-size: 30px;
+}

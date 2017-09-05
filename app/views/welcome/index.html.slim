@@ -1,0 +1,42 @@
+.vote
+  .vote-text 現在の得票数
+  .vote-current
+    .vote-content
+      p #{@votes}
+  .container
+    .row
+      .col-md-5
+        .vote-image
+          = image_tag("ishikawa_senzai.jpg", :size=>"270x360")
+      .col-md-6
+        .vote-profile
+          .vote-entry-number
+            p ENTRY 06
+          .vote-entry-name
+            p 石川悠太
+          .vote-link
+            .vote-link-twitter
+              = link_to 'https://twitter.com/mr_todai_6', {class: "vote-link-twitter-content" ,target: "_blank"}
+                i.fa.fa-twitter
+            .vote-link-profile
+              = link_to profile_index_path, class: 'vote-link-profile-content'
+                p PROFILE
+          .vote-button
+            btn.btn-lg.btn-block.btn-vote.js-vote 投票する
+  .vote-guide
+    p ※投票は一日何度でも可能です。
+
+javascript:
+  $('.js-vote').click(function(){
+      var xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function () {
+          if (this.readyState == 4 && this.status == 200) {
+              console.log(this.response['vote_count']);
+              $('.vote-content').html('<p>' + this.response['vote_count'] + '</p>');
+          }
+      };
+      xhr.responseType = 'json';
+      xhr.open('POST', '/api/v1/votes', true);
+      xhr.send();
+  });
+

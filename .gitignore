@@ -19,14 +19,16 @@
 
 /.idea/
 
+dump.rdb
+
 /node_modules
 /yarn-error.log
 
 .byebug_history
 
 # Only include if you have production secrets in this file, which is no longer a Rails default
-config/secrets.yml
+#config/secrets.yml
 
-config/database.yml
+#/config/database.yml
 
 

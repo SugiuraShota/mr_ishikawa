@@ -1,0 +1,1 @@
+json.vote_count @vote_count

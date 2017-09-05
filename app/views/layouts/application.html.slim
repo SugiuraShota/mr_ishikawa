@@ -1,0 +1,36 @@
+doctype html
+html
+  head
+    title
+      | Mr.Ishikawa
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  body
+    .header
+      .header-top
+        p.header-top-content 世界初！石川悠太に特化したポータルサイト
+      .header-content
+        p MR ISHIKAWA
+      p.header-alert ※当サイトはミスコンテストと一切関係ございません
+      .header-img
+        /= image_tag("header.jpg", :size=>"598x336")
+      .container-fluid
+        ul.header-menu.row
+          li.col-md-6.header-menu-item.header-menu-top = link_to root_path
+            p TOP
+          li.col-md-6.header-menu-item.header-menu-profile = link_to profile_index_path
+            p PROFILE
+    = yield
+    .footer
+      .footer-content
+        h2 掲載人物一覧
+        ul
+          li 石川悠太
+        p.footer-alert
+          | 当サイトは、ミスコンテストと一切関係ございません。
+            コンテンツに関して、ご意見のある方は以下のメールアドレスへご連絡ください。
+            mrtodai.no.6@gmail.com
+
+
+
