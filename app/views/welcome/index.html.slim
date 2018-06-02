@@ -1,8 +1,7 @@
 .vote
   .vote-text 現在の得票数
-  .vote-current
-    .vote-content
-      p #{@votes}
+  .vote-count.js-vote-count
+    p #{@votes}
   .container
     .row
       .col-md-5
@@ -27,16 +26,20 @@
     p ※投票は一日何度でも可能です。
 
 javascript:
-  $('.js-vote').click(function(){
+  $('.js-vote').click(function(e){
+      $(e.target).addClass('btn-active');
       var xhr = new XMLHttpRequest();
       xhr.onreadystatechange = function () {
           if (this.readyState == 4 && this.status == 200) {
-              console.log(this.response['vote_count']);
-              $('.vote-content').html('<p>' + this.response['vote_count'] + '</p>');
+              $('.js-vote-count').html('<p>' + this.response['vote_count'] + '</p>');
           }
       };
       xhr.responseType = 'json';
       xhr.open('POST', '/api/v1/votes', true);
       xhr.send();
+      setTimeout(function () {
+          $(e.target).removeClass('btn-active');
+      }, 100);
+
   });
 

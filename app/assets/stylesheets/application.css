@@ -121,23 +121,17 @@ body {
 .vote-text {
     font-size: 50px;
 }
-.vote-current {
+.vote-count {
     display: inline-block;
     border: solid 5px #27CBF0;
     border-radius: 10px;
     margin: 20px;
     height: 100px;
     width: 300px;
-}
-.vote-content {
-    display: inline-block;
-    margin: 0;
-    padding: 0 20px;
     font-size: 50px;
-    height: 100%;
     vertical-align: middle;
 }
-.vote-content p {
+.vote-count p {
     height: 100%;
     margin: 0;
 }
@@ -189,7 +183,7 @@ body {
     width: 150px;
     margin: 0;
 }
-.btn-vote, .btn-vote:visited {
+.btn-vote {
     color: white;
     background-color: #27CBF0;
     border-color: #27CBF0;
@@ -198,9 +192,10 @@ body {
     text-align: center;
     box-shadow: inset 0 -5px 5px rgba(0,0,0, 0.5);
 }
-.btn-vote:active {
+.btn-active {
     position: relative;
-    /*top: 5px;*/
+    top: 5px;
+    box-shadow: none
 }
 .vote-guide {
     font-size: 35px;
